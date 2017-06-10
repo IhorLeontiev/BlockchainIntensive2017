@@ -15,19 +15,33 @@ More info - https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
 2. Start Ubuntu Bash from searching bar
 3. Takes a clean Ubuntu image, up to being dev ready.
 install npm from official repo, as apt-get has a very old version of npm:
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash –
-sudo apt-get update -y && sudo apt-get upgrade -y
+
+    `curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -`
+
+    `sudo apt-get update -y && sudo apt-get upgrade -y`
 4. Install the NodeJs
-sudo apt-get install -y build-essential python nodejs
+
+    `sudo apt-get install -y build-essential python nodejs`
+
 5. Upgrade npm before install tools
-sudo npm install -g npm 
-sudo npm install -g ethereumjs-testrpc truffle
-if you have acces error, try to use unsafe parameters - sudo npm install --unsafe-perm --verbose -g ethereumjs-testrpc
+
+    `sudo npm install -g npm` 
+    
+    `sudo npm install -g ethereumjs-testrpc truffle`
+
+    *if you have access error, try to use* 
+
+    `unsafe parameters - sudo npm install --unsafe-perm --verbose -g ethereumjs-testrpc`
+
 6. Intall geth
-sudo apt-get install software-properties-common
-sudo add-apt-repository -y ppa:ethereum/ethereum
-sudo apt-get update
-sudo apt-get install ethereum
+
+    `sudo apt-get install software-properties-common`
+
+    `sudo add-apt-repository -y ppa:ethereum/ethereum`
+
+    `sudo apt-get update`
+    
+    `sudo apt-get install ethereum`
 
 # Linux installation
 The same as for Windows subsytem 
