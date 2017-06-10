@@ -49,6 +49,7 @@ The same as for Windows subsytem
 # Test Guide
 
 1. How to use truffle console
+```
 Truffle v3.2.5 - a development framework for Ethereum
 Usage: truffle <command> [options]
 Commands:
@@ -69,7 +70,7 @@ Commands:
   version   Show version number and exit
 
 See more at http://truffleframework.com/docs
-
+```
 2. For BASIC Truffle project
 truffle init
 Truffle console:
@@ -93,6 +94,7 @@ metaCoin.getBalance.call(account0);
 
 1. Go to folder with truffle project
 2. Add parameters of Deployed Azure template to truffle.js:
+```
     module.exports = {
   networks: {
   azure :{
@@ -107,6 +109,7 @@ metaCoin.getBalance.call(account0);
     }
   }
 };
+```
 3. Safe file
 4. Try to migrate your Smart contact by using 'truffle migrate --network azure'
 You will get the following error:
