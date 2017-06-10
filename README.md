@@ -111,15 +111,17 @@ metaCoin.getBalance.call(account0);
 };
 ```
 3. Safe file
-4. Try to migrate your Smart contact by using 'truffle migrate --network azure'
+4. Try to migrate your Smart contact by using ```truffle migrate --network azure```
+```
 You will get the following error:
 Running migration: 1_initial_migration.js
   Deploying Migrations...
 Error encountered, bailing. Network state unknown. Review successful transactions manually.
 Error: account is locked 
 For resolve this problemm you need to unlock the account
+```
 5. Connect to your TX node (Deployments - Output - SSH to first Tx node)
-6. Run 'geth attach' command
-7. Run 'personal.unlockAccount(eth.coinbase)' command to unlock the account
-8. Migrate your smart contract 'truffle migrate --network azure'
-9. To connect to truffle console type 'truffle console --network azure'
+6. Run ```geth attach``` command
+7. Run ```personal.unlockAccount(eth.coinbase)``` command to unlock the account
+8. Migrate your smart contract ```truffle migrate --network azure```
+9. To connect to truffle console type ```truffle console --network azure```
