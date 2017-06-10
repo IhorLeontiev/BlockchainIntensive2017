@@ -76,15 +76,47 @@ Truffle console:
 -How to get accounts
 web3.eth.accounts
 
--How to get reference to deployed contract
+2.1. How to get reference to deployed contract
 var metaCoin;
 MetaCoin.deployed().then(function(deployed) {metaCoin = deployed;});
 
--How to get balance of account 0
+2.2. How to get balance of account 0
 metaCoin.getBalance.call(web3.eth.accounts[0])
 
--How to send coins
+2.3. How to send coins
 var account0 = web3.eth.accounts[0];
 var account1 = web3.eth.accounts[1];
 metaCoin.sendCoin(account1, 1000, {from: account0});
 metaCoin.getBalance.call(account0);
+
+#How to deploy Smart Contract to Ethereum BaaS on Azure by using truffle
+
+1. Go to folder with truffle project
+2. Add parameters of Deployed Azure template to truffle.js:
+    module.exports = {
+  networks: {
+  azure :{
+      host: "", //Adress of your Azure RPC endpoints (Deployments - Output)
+      port: 8545, //Port of RPC - basically rest the same
+      network_id: "" //Network id which you have choose when created the network 
+    },
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
+  }
+};
+3. Safe file
+4. Try to migrate your Smart contact by using 'truffle migrate --network azure'
+You will get the following error:
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+Error encountered, bailing. Network state unknown. Review successful transactions manually.
+Error: account is locked 
+For resolve this problemm you need to unlock the account
+5. Connect to your TX node (Deployments - Output - SSH to first Tx node)
+6. Run 'geth attach' command
+7. Run 'personal.unlockAccount(eth.coinbase)' command to unlock the account
+8. Migrate your smart contract 'truffle migrate --network azure'
+9. To connect to truffle console type 'truffle console --network azure'
