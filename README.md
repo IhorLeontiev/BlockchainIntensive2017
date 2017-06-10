@@ -89,7 +89,7 @@ var account1 = web3.eth.accounts[1];
 metaCoin.sendCoin(account1, 1000, {from: account0});
 metaCoin.getBalance.call(account0);
 
-#How to deploy Smart Contract to Ethereum BaaS on Azure by using truffle
+# How to deploy Smart Contract to Ethereum BaaS on Azure by using truffle
 
 1. Go to folder with truffle project
 2. Add parameters of Deployed Azure template to truffle.js:
