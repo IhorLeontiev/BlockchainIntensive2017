@@ -32,7 +32,7 @@ sudo apt-get install ethereum
 # Linux installation
 The same as for Windows subsytem 
 
-#Test Guide
+# Test Guide
 
 1. How to use truffle console
 Truffle v3.2.5 - a development framework for Ethereum
@@ -55,23 +55,22 @@ Commands:
   version   Show version number and exit
 
 See more at http://truffleframework.com/docs
+
 2. For BASIC Truffle project
 truffle init
 Truffle console:
-//How to get accounts
+-How to get accounts
 web3.eth.accounts
 
-//How to get reference to deployed contract
+-How to get reference to deployed contract
 var metaCoin;
 MetaCoin.deployed().then(function(deployed) {metaCoin = deployed;});
 
-//How to get balance of account 0
+-How to get balance of account 0
 metaCoin.getBalance.call(web3.eth.accounts[0])
 
-//How to send coins
+-How to send coins
 var account0 = web3.eth.accounts[0];
 var account1 = web3.eth.accounts[1];
 metaCoin.sendCoin(account1, 1000, {from: account0});
 metaCoin.getBalance.call(account0);
-
-
