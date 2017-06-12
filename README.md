@@ -72,23 +72,32 @@ Commands:
 See more at http://truffleframework.com/docs
 ```
 2. For BASIC Truffle project
+```
 truffle init
-Truffle console:
+truffle console
+```
 -How to get accounts
+```
 web3.eth.accounts
+```
 
 2.1. How to get reference to deployed contract
+```
 var metaCoin;
 MetaCoin.deployed().then(function(deployed) {metaCoin = deployed;});
+```
 
 2.2. How to get balance of account 0
+```
 metaCoin.getBalance.call(web3.eth.accounts[0])
+```
 
 2.3. How to send coins
-var account0 = web3.eth.accounts[0];
+```var account0 = web3.eth.accounts[0];
 var account1 = web3.eth.accounts[1];
 metaCoin.sendCoin(account1, 1000, {from: account0});
 metaCoin.getBalance.call(account0);
+```
 
 # How to deploy Smart Contract to Ethereum BaaS on Azure by using truffle
 
