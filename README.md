@@ -50,7 +50,7 @@ The same as for Windows subsytem
 
 1. Install Homebrew
    
-   `More installation information and options at http://docs.brew.sh/Installation.html.`
+   *More installation information and options at http://docs.brew.sh/Installation.html.*
 
 2. Check that you have latest version of Xcode
 
@@ -58,22 +58,25 @@ The same as for Windows subsytem
     
     `brew install node`
     
-    To make sure you have Node and NPM installed, run two simple commands to see what version of each is installed
+    *To make sure you have Node and NPM installed, run two simple commands to see what version of each is installed*
     
     `node -v`
+    
     `npm -v`
     
-    How to Update Node and NPM
+    *How to Update Node and NPM*
     
     `brew update`
+    
     `brew upgrade node  `
 
 4. Intall geth
 
     `brew tap ethereum/ethereum`
+    
     `brew install ethereum`
     
-    You can install the develop branch by running --devel
+    *You can install the develop branch by running --devel*
     
     `brew install ethereum --devel`
 
