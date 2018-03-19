@@ -46,6 +46,38 @@ install npm from official repo, as apt-get has a very old version of npm:
 # Linux installation
 The same as for Windows subsytem 
 
+# Mac installation
+
+1. Install Homebrew
+   
+   `More installation information and options at http://docs.brew.sh/Installation.html.`
+
+2. Check that you have latest version of Xcode
+
+3. Install NodeJs
+    
+    `brew install node`
+    
+    To make sure you have Node and NPM installed, run two simple commands to see what version of each is installed
+    
+    `node -v`
+    `npm -v`
+    
+    How to Update Node and NPM
+    
+    `brew update`
+    `brew upgrade node  `
+
+4. Intall geth
+
+    `brew tap ethereum/ethereum`
+    `brew install ethereum`
+    
+    You can install the develop branch by running --devel
+    
+    `brew install ethereum --devel`
+
+
 # Test Guide
 
 1. How to use truffle console
