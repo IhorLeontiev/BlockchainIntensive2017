@@ -5,8 +5,17 @@ Hi all this repository for support Microsoft Blockchain Intense 2017
 Truffle framework
 http://truffleframework.com/
 https://truffle-box.github.io/
+Ether
 TestRPC https://github.com/ethereumjs/testrpc
+
 Geth - https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu
+
+Ganache - http://truffleframework.com/ganache/ 
+    
+    Also you can to install it from command line: `npm install -g ganache-cli`  
+More info - https://github.com/trufflesuite/ganache-cli
+
+
 
 # How to set-up Dev Environment
 # Windows Subsytem for Linux intallation:
